@@ -1,7 +1,7 @@
 package algorithm;
 
 public class PutSort {
-    String[] b = new String[20];
+
 
     public static void sort(String[] a) {
         int n = a.length;
