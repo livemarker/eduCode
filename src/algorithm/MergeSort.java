@@ -1,5 +1,6 @@
 package algorithm;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MergeSort {
@@ -35,10 +36,11 @@ public class MergeSort {
 
     }
 
-    public static void main(String[] args) {
-        Comparable[] a=new Comparable[10];
-        for (int i = 0; i <a.length ; i++) {
-            a[i]=Math.random()*10;
+
+    public void start() {
+        Comparable[] a = new Comparable[10];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = Math.random() * 10;
         }
         sort(a);
         System.out.println(Arrays.toString(a));

@@ -2,7 +2,7 @@ package algorithm;
 
 import java.util.Scanner;
 
-public class BinarySearch {
+public class BinarySearchh {
     public static int binarySearch(int lo, int hi) {
         if (hi - lo == 1) {
             return lo;
@@ -15,9 +15,9 @@ public class BinarySearch {
         } else {
             return binarySearch(lo, mid);
         }
-    }
 
-    public static void main(String[] args) {
+    }
+    public void start(){
         Scanner scanner = new Scanner(System.in);
         int k = Integer.parseInt(scanner.next());
         int n = k * 20+200;
@@ -26,4 +26,3 @@ public class BinarySearch {
         System.out.println("Ur number is " + guess);
     }
 }
-
