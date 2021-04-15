@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Fibonacci {
 
-    // не эффективный алгоритм(просто число n), эффективен с помощью массива(нет лишних вычислений)
+    // не эффективный алгоритм(просто число n) O(2^n), эффективен с помощью массива(нет лишних вычислений)
     private static long fiNaive(int n, long[] mem) {
         if (mem[n] != -1) {
             return mem[n];
@@ -18,7 +18,7 @@ public class Fibonacci {
 
         return result;
     }
-
+// O(n)
     private static long fiEffective(int n) {
         long[] arr = new long[n + 1];
 
