@@ -1,14 +1,22 @@
 package algorithm;
 
+import java.util.Arrays;
+
 public class Fibonacci {
 
-    // не эффективный алгоритм
-    private static long fiNaive(int n) {
+    // не эффективный алгоритм(просто число n), эффективен с помощью массива(нет лишних вычислений)
+    private static long fiNaive(int n, long[] mem) {
+        if (mem[n] != -1) {
+            return mem[n];
+        }
         if (n <= 1) {
             return n;
         }
 
-        return fiNaive(n - 1) + fiNaive(n - 2);
+        long result = fiNaive(n - 1, mem) + fiNaive(n - 2, mem);
+        mem[n] = result;
+
+        return result;
     }
 
     private static long fiEffective(int n) {
@@ -25,7 +33,12 @@ public class Fibonacci {
     }
 
     public void start() {
-        System.out.println(fiNaive(5));
-        System.out.println(fiEffective(100));
+        int n = 100;
+        long[] mem = new long[n + 1];
+        Arrays.fill(mem, -1);
+
+
+        System.out.println(fiNaive(n, mem));
+        System.out.println(fiEffective(n));
     }
 }
