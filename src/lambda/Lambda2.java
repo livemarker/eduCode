@@ -1,9 +1,14 @@
 package lambda;
 
+import javax.imageio.stream.ImageInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Lambda2 {
+    public static void main(String[] args) {
+        Lambda2 lambda2=new Lambda2();
+        lambda2.start();
+    }
     public void start() {
         List<Person> people = new ArrayList<>();
         people.add(new Person("aaa", 12));
@@ -24,6 +29,9 @@ public class Lambda2 {
         people.stream().filter(person -> person.getAge() >= 20).
                 sorted((people1, people2) -> people1.getName().compareTo(people2.getName())).
                 forEach(System.out::println);
+        System.out.println("");
+        people.stream().filter(p->p.getAge()>25).sorted((p1,p2)->p1.getName().compareTo(p2.getName())).forEach(people::add);
+        people.stream().forEach(System.out::println);
     }
 }
 
