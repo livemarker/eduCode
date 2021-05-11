@@ -9,8 +9,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Starter  {
-
+public class Starter {
 
 
     public static void main(String[] args) {
