@@ -2,6 +2,7 @@ package algorithm;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 public class MergeSort {
     public static void sort(Comparable[] a) {
@@ -9,7 +10,7 @@ public class MergeSort {
         sort(a, aux, 0, a.length);
     }
 
-    public static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
+   private static void sort(Comparable[] a, Comparable[] aux, int lo, int hi) {
 
         if (hi - lo <= 1) {
             return;
@@ -37,10 +38,11 @@ public class MergeSort {
     }
 
 
-    public void start() {
+    public static void main(String[] args) {
         Comparable[] a = new Comparable[10];
+        Random r=new Random();
         for (int i = 0; i < a.length; i++) {
-            a[i] = Math.random() * 10;
+            a[i] = r.nextInt(100);
         }
         sort(a);
         System.out.println(Arrays.toString(a));
