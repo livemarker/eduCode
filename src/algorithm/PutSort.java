@@ -15,7 +15,7 @@ public class PutSort {
         int n = a.length;
         for (int i = 1; i < n; i++) {
             for (int j = i; j > 0; j--) {
-                System.out.println(a[j-1]+">"+a[j]);
+              //  System.out.println(a[j-1]+">"+a[j]);
                 if (a[j - 1].compareTo(a[j]) > 0) {
                     exchange(a, j - 1, j);
 

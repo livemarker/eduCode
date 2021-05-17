@@ -2,7 +2,7 @@ package algorithm;
 
 import java.util.Arrays;
 import java.util.Collections;
-
+// task travel
 public class Greedy2 {
     public static void main(String[] args) {
         int[] stations = {0, 200, 375, 550, 750, 950};
